@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-// define lfsr state arrays, max. 128 bit = 2 x 64 bit
+// declare lfsr state arrays, max. 128 bit = 2 x 64 bit
 uint64_t state128[2];
 uint64_t state127[2];
 uint64_t state126[2];

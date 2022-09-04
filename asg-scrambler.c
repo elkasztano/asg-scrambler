@@ -1,4 +1,6 @@
-/*For demonstration purposes only. Not intended to be used to encrypt confident data. The alternating step generator (ASG) has been described by C.G. Günther in 1986 and has been patented in 1989. According to patents.google.com the patent has already expired.*/
+// For demonstration purposes only. Not intended to be used to encrypt confident data. 
+// The alternating step generator (ASG) has been described by C.G. Günther in 1986 and has been patented in 1989.
+// According to patents.google.com the patent has already expired.
 
 #include <stdio.h>
 #include <stdint.h>

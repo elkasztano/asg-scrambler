@@ -40,10 +40,7 @@ int bitview(uint64_t x)
 }
 
 int main(int argc, char *argv[])
-{
-	// initializing array for lfsr128 start state
-	uint64_t start_state128[2] = {0ULL};
-	
+{	
 	char *seed;
 	int opt;
 	int count=0;
@@ -69,7 +66,7 @@ int main(int argc, char *argv[])
 				for (int i = 0; i < count; ++i) seed[i] = optarg[i];				    
 				
 				// XOR initialized state value with seed. 
-				for (int i = 0; i < count; ++i) start_state128[(i/8)%2] ^= ((uint64_t)seed[i] << ((i%8)*8));
+				for (int i = 0; i < count; ++i) state128[(i/8)%2] ^= ((uint64_t)seed[i] << ((i%8)*8));
 
 				break;
 			case ':':
@@ -80,10 +77,6 @@ int main(int argc, char *argv[])
 				return 1;
 		}
 	}
-
-
-	// set start state for 128 bit lfsr
-	for (int i = 0; i < 2; ++i) state128[i] = start_state128[i];
 
 	// set start state for 127 bit lfsr
 	state127[0] = 0x7fe1105ab10c5e4fULL;
